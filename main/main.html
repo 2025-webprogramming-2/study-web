@@ -4,6 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>스터디</title>
+    <link rel="stylesheet" link href="main.css">
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- 목표영역 -->
+      <aside class="goal-section">
+        <h2>목표</h2>
+        <ul>
+          <li>태그 사용법 마스터하기</li>
+          <li>모바일 반응형 뷰 만들기</li>
+        </ul>
+      </aside>
+
+      <!-- 스터디룸 영역 -->
+      <main class = "study-room">
+        <h2>스터디룸</h2>
+
+        <!-- 로그인 컴포넌트 3개 -->
+        <div class="component-card" onclick="alert('다음페이지경로')">
+          <div class="image-box">이미지</div>
+          <div class="component-content">
+            <h3>로그인 컴포넌트</h3>
+            <p>HTML : <button class="component-code">input</button></p>
+            <p>CSS :
+              <button class="component-code">선택자</button>
+              <button class="component-code">color 속성</button>
+              <button class="component-code">display 속성</button>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
