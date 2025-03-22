@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>로그인 화면</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="title-with-logo">
+            <h2>로그인</h2>
+            <img src = "pencil.svg" alt="로고" class="title-logo">
+        </div>
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="username">사용자 이름</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">아이디 기억하기</label>
+            </div>
+            <button type="submit" class="login-btn">공부하러 가기!</button>
+            <p class="forgot-id">아이디를 잊어버리셨나요?</p>
+        </form>
+    </div>
+</body>
+</html>
