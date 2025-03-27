@@ -37,11 +37,18 @@
   background-color: #ffffff;
   border-top: 5px solid #4d6ab2;
   border-bottom: 5px solid #4d6ab2;
-
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 50px;
 }
-
+.component > p {
+  font-size: 20px;
+  margin-top: 50px;
+}
+.component > div {
+  display: flex;
+  width: 100%;
+}
 /* 설명 섹션 */
 .contents {
   width: 100%;
@@ -91,7 +98,7 @@
   border-radius: 5px;
   border: 2px solid #7b90c7;
   background: #30384b;
-  padding: 10px;
+  padding: 20px;
 
   font-size: 18px;
   font-style: normal;
@@ -121,6 +128,10 @@
   color: rgb(248, 118, 118);
 }
 
+.highlight_gray {
+  color: rgb(158, 158, 158);
+}
+
 /* 실습 */
 
 #box_1,
@@ -131,20 +142,69 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 #box_1 {
   background-color: rgb(160, 198, 255);
   transition: all 1s;
 }
-
 #box_1:hover {
   background-color: rgb(209, 147, 203);
   border-radius: 50%;
 }
+
 #box_2 {
   background-color: rgb(25, 169, 253);
+  transition: all 1s;
 }
+#box_2:hover {
+  height: 300px;
+}
+
 #box_3 {
   background-color: rgb(21, 69, 141);
   color: white;
+  transition: all 1s;
+}
+#box_3:hover {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.transition_box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.transition_box > div {
+  background-color: rgb(28, 3, 101);
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+.transition_box > div:nth-of-type(1) {
+  /* property duration function delay */
+  transition: width 1s ease-in 1s;
+}
+.transition_box > div:nth-of-type(2) {
+  /* duration */
+  transition: 1s;
+}
+.transition_box > div:nth-of-type(3) {
+  /* property duration */
+  transition: width 1s;
+}
+.transition_box > div:nth-of-type(4) {
+  /* duration function */
+  transition: 1s ease-in;
+}
+.transition_box > div:nth-of-type(5) {
+  /* duration delay*/
+  transition: 1s 1s;
+}
+.transition_box > div:hover {
+  width: 200px;
 }
