@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="studyloginpage.css" rel="stylesheet" />
+    <title>스터디</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="../../main/main.html"
+        ><img src="arrow.png.url" alt="뒤로가기" class="arrow_icon"
+      /></a>
+      <h1 class="topTitle">로그인 컴포넌트 코드 분석하기</h1>
+    </header>
+
+    <section class="component">
+    </section>
+
+    <section class="contents">
+      <div class="contentBox">
+        <div class="contentTitle">1. html</div>
+
+        <div class="contentText">
+          <h3><span class="highlight_bold">&lt;</pre>div class="login-container"&gt;</span></h3>
+          <br />
+          ->login-container <span class="highlight_yellow">클래스 형성</span> 후 로그인 박스 만들기<br />
+          (div 태그는 구획을 나누는 <span class="highlight_yellow"> 레이아웃 </span>역할로 사용)
+          <br />
+          <br />
+          <br />
+          <h3><span class="highlight_bold">&lt;h2&gt;로그인 &lt;/h2&gt;
+          <br />
+          &lt;img src="pencil.svg" alt="로고" class="title-logo"&gt;</span></h3>
+          <br />
+          ->로그인이라는 큰제목을 표현
+          <br />
+          h2태그는 글자크기를 조절
+          <br />
+          img는 사진을 보여줄때 사용하며 "pencil.svg" 를 로고로 사용
+          <br />
+          ("title with-logo"클래스)
+          <br />
+          <br />
+          <br />
+          <h3><span class="highlight_bold">&lt;label for="username"&gt;사용자 이름&lt;/label&gt;
+          <br />
+          &lt;input type="text" id="username" name="username" required&gt;</span></h3>
+          <br />
+          ->로그인/패스워드 입력칸
+          <br />
+          label태그에 사용자 이름이라고 이름을 보여준다.
+          <br />
+          input 칸에 실제 아이디를 입력받는다. required는 꼭 입력해야 한다는 뜻
+          <br />
+          ("input-group"클래스)
+          <br />
+          <br />
+          <br />
+          <h3><span class="highlight_bold">&lt;input type="checkbox" id="remember" name="remember"&gt;
+          <br />
+          &lt;label for="remember"&gt;아이디 기억하기&lt;/label&gt;</span></h3>
+          <br />
+          ->아이디 저장하기 체크박스
+          <br />
+          아이디/패스워드 입력칸과는 다르게 input 타입을 checkbox로 만들어서
+          <br />
+          체크할수있는 박스를 만듬("remember-me" 클래스)
+          <br />
+          <br />
+          <br />
+          <h3><span class="highlight_bold">&lt;button type="submit" class="login-btn"&gt;공부하러 가기!&lt;/button&gt;</span></h3>
+          <br />
+          ->로그인 버튼
+          button태그를 이용해서 클릭했을 때 로그인시도
+          <br />
+          <br />
+          <br />
+        <div class="contentTitle">2. css</div>
+        <span class="highlight_bold">: Arial, sans-serif;</span>  -> 글꼴 설정<br />
+        <span class="highlight_bold">background-image: url('back.jpg');</span>  -> 배경 이미지 가져오기<br />
+        <span class="highlight_bold">background-size: cover;</span>  -> 화면에 이미지 꽉 채우기     <br />             
+        <span class="highlight_bold">background-position: center;</span>  -> 배경화면 가운데 정렬   <br />          
+        <span class="highlight_bold">background-repeat: no-repeat;</span>  -> 배경화면 반복없이 한번만    <br />        
+        <span class="highlight_bold">display: flex;</span>  -> 가운데 정렬<br />
+        <span class="highlight_bold">justify-content: center;</span>  -> 가로 방향 가운데 정렬<br />
+        <span class="highlight_bold">align-items: center;</span>  -> 새로 방향 가운데 정렬<br />
+        <span class="highlight_bold">height: 100vh;</span>  -> 화면 높이 100&<br />
+        <span class="highlight_bold">margin: 0;</span>  -> 버깥 여백 엾애기<br />
+        <br />
+        <br />
+        <br />
+        <span class="highlight_bold">.login-container {</span>  ->login-container 클래스 로그인 박스 꾸미기<br />
+        <span class="highlight_bold">   background-color: #e6f9e6;</span>  -> 연한 연두색 배경<br />
+        <span class="highlight_bold"> padding: 30px;</span>  -> 안쪽 여백 <br />
+        <span class="highlight_bold"> border-radius: 8px;</span>  -> 모서리 둥글게<br />
+        <span class="highlight_bold"> box-shadow: ...</span>  -> 그림자 효과 <br />
+        <span class="highlight_bold">width: 100%;</span><br />
+        <span class="highlight_bold"> max-width: 400px;</span>  -> 최대 너비 제한<br />
+        <span class="highlight_bold"> text-align: center;}</span>  -> 글씨 가운데 정렬
+        <br />
+        <br />
+        <br />
+        <span class="highlight_bold">.input-group {</span>  -> input-group 클래스(그룹 전체)<br />
+        <span class="highlight_bold">margin-bottom: 15px;</span>  -> 바닥에서 부터의 여백<br />
+        <span class="highlight_bold">text-align: left;}</span>  -> 왼쪽부터 텍스트 입력<br />
+        <span class="highlight_bold">.input-group label { }</span>  -> (라벨(아이디,비밀번호 글씨))<br />
+        <span class="highlight_bold">.input-group input { }</span>  -> (실제 입력창) <br />
+        <span class="highlight_bold">.input-group input:focus { }</span>  -> 입력칸을 클릭할 때 테두리 색을 바꿔줌
+        <br />
+        <br />
+        <br />
+        <span class="highlight_bold">.title-with-logo {<br />  -> title-with-logo 클래스
+        <span class="highlight_bold">display: flex;<br />
+        <span class="highlight_bold">align-items: center;<br />    
+        <span class="highlight_bold">justify-content: center;<br />
+        <span class="highlight_bold">gap: 15px;<br />              
+        <span class="highlight_bold">margin-bottom: 20px;}<br /> 
+            <br />
+        <span class="highlight_bold">.title-with-logo h2 {<br />
+        <span class="highlight_bold">font-size: 24px;<br />
+        <span class="highlight_bold">color: #333;<br />
+        <span class="highlight_bold">margin: 0;}<br />
+            <br />
+        <span class="highlight_bold">.title-logo {<br />
+        <span class="highlight_bold">width: 28px;<br />  
+        <span class="highlight_bold">height: 28px;}<br />  -> 로그인 박스와 만드는 방법 동일!
+        <br />
+        <br />
+        <br />
+
+      </div>
+    </section>
+  </body>
+</html>
