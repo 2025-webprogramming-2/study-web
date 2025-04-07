@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <title>js example</title>
+        <!-- defer은 자바스크립트가 html을 다 읽고 나서 실행되게 만듬 -->
+        <script src="study_time_calculate.js" defer></script>          
+    </head>
+    <body>
+        <h2>목표 공부 시간을 입력하세요</h2>
+        <input type="text" id="studyTimeGoal" placeholder="목표시간을 입력하세요.">
+        <button onclick="getStudyTimeGoal()">확인</button>
+
+        <h2>공부 시작 시간</h2>
+        <select id="startTimeSelect"></select>
+
+        <h2>공부 끝난 시간</h2>
+        <select id="endTimeSelect"></select>
+        <button onClick="calculateStudyTime();">공부한 시간 계산</button>
+        <p id="result"></p>
+
+        <!-- 현재 공부 시간 게이지 -->
+        <h2>목표 달성량</h2>
+        <meter id="studyMeter" min="0" max="1" value="40"></meter>
+        <button onClick="UpdateStudyMeter()">갱신</button>
+    </body>
+</html>
