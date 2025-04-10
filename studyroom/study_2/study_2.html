@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./study_2.css" rel="stylesheet" />
+    <title>스터디</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="../../main/main.html"
+        ><img src="../../img/arrow.png" alt="뒤로가기" class="arrow_icon"
+      /></a>
+      <h1 class="topTitle">테이블 태그를 이용한 시간표</h1>
+    </header>
+
+    <section class="component">
+      <h1> 강의 시간표</h1>
+      <div class ="table_st">
+        <table>
+          <thead>
+            <tr>
+              <th>시간</th>
+              <th>월</th>
+              <th>화</th>
+              <th>수</th>
+              <th>목</th>
+              <th>금</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09:00-10:00</td>
+              <td></td>
+              <td>영상편집론</td>
+              <td></td>
+              <td></td>
+              <td>영상편집론</td>
+            </tr>
+            <tr>
+              <td>10:30-11:45</td>
+              <td>데이터사이언스</td>
+              <td></td>
+              <td>디지털미디어원리</td>
+              <td></td>
+              <td>데이터사이언스</td>
+            </tr>
+            <tr>
+              <td>12:00-13:15</td>
+              <td></td>
+              <td>UX/UI</td>
+              <td>English</td>
+              <td></td>
+              <td>English</td>
+            </tr>
+            <tr>
+              <td>13:30-14:45</td>
+              <td>채플</td>
+              <td></td>
+              <td></td>
+              <td rowspan="3">웹플밍</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>15:00-16:15</td>
+              <td></td>
+              <td></td>
+              <td>UX/UI</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>16:30-17:45</td>
+              <td></td>
+              <td>디지털미디어원리</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="contents">
+      <div class="contentBox">
+        <div class="contentTitle">1. 테이블 태그</div>
+
+        <div class="contentText">
+          table 표 전체를 감싸는 태그
+          <br />
+          tr 하나의 행(row)을 나타냄
+          <br />
+          th 표의 제목 셀(굵고 가운데 정렬)
+          <br />
+          td 표의 일반 셀, 데이터 내용용
+          <br />
+          thead 표의 머리글 영역
+          <br />
+          tbody 표의 본문 영역, 데이터가 들어감
+          <br />
+          tfoot 표의 꼬리말 영역, 요약이나 합계 등 표시 가능
+          <br />
+          colspan 가로로 셀 병합
+          <br />
+          rowspan 세로로 셀 병합
+    
+        </div>
+        <div class="contentTitle">2. 오버플로우</div>
+        <br>
+        overflow: 가로+세로 모두 넘치면 스크롤 생성성
+        <br />
+        +visible(그냥 박스 바깥으로 흘러나옴), hidden(잘라냄),<br/> 
+        scroll(항상 스크롤바 표시), auto(넘칠때만 자동으로 스크롤바 표시)
+        <br />
+        white-space: 콘텐츠 줄바꿈 여부 제어
+        <br />
+        text-overflow: 텍스트 넘칠 떄 말줄임(...) 처리
+      </div>
+    </section>
+  </body>
+</html>

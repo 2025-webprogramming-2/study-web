@@ -3,18 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="studyloginpage.css" rel="stylesheet" />
+    <link href="./study_6.css" rel="stylesheet" />
     <title>스터디</title>
   </head>
   <body>
     <header class="topbar">
       <a href="../../main/main.html"
-        ><img src="arrow.png.url" alt="뒤로가기" class="arrow_icon"
+        ><img src="../../img/arrow.png" alt="뒤로가기" class="arrow_icon"
       /></a>
       <h1 class="topTitle">로그인 컴포넌트 코드 분석하기</h1>
     </header>
 
     <section class="component">
+      <div class="login-container">
+        <div class="title-with-logo">
+            <h2>로그인</h2>
+            <img src = "pencil.svg" alt="로고" class="title-logo">
+        </div>
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="username">사용자 이름</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">아이디 기억하기</label>
+            </div>
+            <button type="submit" class="login-btn">공부하러 가기!</button>
+            <p class="forgot-id">아이디를 잊어버리셨나요?</p>
+        </form>
+    </div>
     </section>
 
     <section class="contents">
@@ -33,7 +55,7 @@
           <br />
           &lt;img src="pencil.svg" alt="로고" class="title-logo"&gt;</span></h3>
           <br />
-          ->로그인이라는 큰제목을 표현
+          -><span class="highlight_yellow"> 로그인이라는 큰제목을 표현 </span>
           <br />
           h2태그는 글자크기를 조절
           <br />
@@ -47,7 +69,7 @@
           <br />
           &lt;input type="text" id="username" name="username" required&gt;</span></h3>
           <br />
-          ->로그인/패스워드 입력칸
+          -><span class="highlight_yellow"> 로그인/패스워드 입력칸 </span>
           <br />
           label태그에 사용자 이름이라고 이름을 보여준다.
           <br />
@@ -61,7 +83,7 @@
           <br />
           &lt;label for="remember"&gt;아이디 기억하기&lt;/label&gt;</span></h3>
           <br />
-          ->아이디 저장하기 체크박스
+          -><span class="highlight_yellow"> 아이디 저장하기 체크박스 </span>
           <br />
           아이디/패스워드 입력칸과는 다르게 input 타입을 checkbox로 만들어서
           <br />
@@ -124,7 +146,7 @@
             <br />
         <span class="highlight_bold">.title-logo {<br />
         <span class="highlight_bold">width: 28px;<br />  
-        <span class="highlight_bold">height: 28px;}<br />  -> 로그인 박스와 만드는 방법 동일!
+        <span class="highlight_bold">height: 28px;}<br />  -> <span class="highlight_yellow"> 박스와 만드는 방법 동일!</span>
         <br />
         <br />
         <br />

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./study_1.css" rel="stylesheet" />
+    <title>스터디</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="../../main/main.html"
+        ><img src="../../img/arrow.png" alt="뒤로가기" class="arrow_icon"
+      /></a>
+      <h1 class="topTitle">반응 * 상태 * 구조 선택자</h1>
+    </header>
+
+    <section class="component">
+      <body>
+        <div class="container">
+          <h1>반응 * 상태 * 구조 선택자 데모</h1>
+
+          <div>
+            <h2>링크 pseudo-class</h2>
+            <p>
+              아래 링크에 마우스를 올려보시고, 클릭 후 다시 돌아오면
+              <strong>:visited</strong> 상태가 적용되어 다른 색상으로 보입니다.
+            </p>
+            <p>
+              <a href="http://www.example.com" target="_blank" rel="noopener noreferrer">
+                Example.com 방문하기
+              </a>
+            </p>
+          </div>
+
+          <div>
+            <h2>포커스 & 버튼 상태</h2>
+            <form>
+              <label for="username">아이디</label>
+              <input type="text" id="username" placeholder="아이디 입력" />
+              <br><br>
+              <button type="submit">로그인</button>
+            </form>
+            <p>입력란을 클릭하면 <strong>:focus</strong> 스타일이 적용되고, 버튼을 누르고 있는 동안은 <strong>:active</strong> 스타일이 적용됩니다.</p>
+          </div>
+          <div class = "button-group-box">
+            <h2>구조 선택자 + 상태 선택자 응용</h2>
+            <p>버튼 그룹에서 마지막 버튼만 <strong>:last-child</strong>로 붉은 강조가 되고, <strong>:hover</strong>나 <strong>:active</strong> 상태도 적용됩니다.</p>
+            <div class="button-group">
+              <button type="button">수정</button>
+              <button type="button">저장</button>
+              <button type="button">삭제</button>
+            </div>
+          </div>       
+        </div>
+      </body>
+    </section>
+
+    <section class="contents">
+      <div class="contentBox">
+        <div class="contentTitle"><h1>1. 반응 * 상태 선택자</h1></div>
+
+        <div class="contentText">
+          <br>
+          <span class="highlight_bold">:hover</span> :마우스 커서를 어떤 요소 위에 올려둔 상태
+          <br/>
+          <span class="highlight_bold">:active</span> :요소(주로 버튼이나 링크)를 클릭 중인 상태(마우스를 뗄 때까지)
+          <br/>
+          <span class="highlight_bold">:focus</span> :키보드로 포커스가 잡힌 상태(탭 키를 눌러 요소에 초점을 맞췄거나, 직접 클릭해서 활성화)
+          <br />
+          <span class="highlight_bold">:link</span> : 아직 한 번도 방문하지 않은 링크
+          <br />
+          <span class="highlight_bold">:visited</span> :이미 방문한 적이 있는 링크
+          <br />
+           link와 visited는 같이 사용해야 링크의 상태를 알 수 있음
+          <br />
+          <br />
+        </div>
+
+        <div class="contentTitle"><h1>2. 구조 선택자</h1></div>
+
+        <div class="contentText">
+          <br>
+          HTML 구조 안에서 어떤 위치에 있는 요소를 선택하는 도구
+          <br/>
+          -> HTML이 건물이면 구조 선택자는 건물에 있는 방을 구조 또는 패턴에 따라 선택할 수 있다.
+          <br/>
+          <span class="highlight_bold">:first-child, last-child</span> :첫 번째, 마지막 자식식
+          <br/>
+          <span class="highlight_bold">:nth-child(n)</span> :n번쨰 자식
+          <br/>
+          <span class="highlight_bold">:only-child</span> :자식이 1개뿐인 경우
+          <br/>
+          <span class="highlight_bold">:not(...)</span> :제외 -> li:not(:last-child) -> 마지막 빼고 전부
+      
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

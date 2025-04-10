@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./study_12.css" rel="stylesheet" />
+    <title>스터디</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="../../main/main.html"
+        ><img src="../../img/arrow.png" alt="뒤로가기" class="arrow_icon"
+      /></a>
+      <h1 class="topTitle">웹/데스크탑 뷰</h1>
+    </header>
+
+    <section class="component">
+      <p>화면 크기 조정</p>
+      <div>
+        <div class="componentCard">1번</div>
+        <div class="componentCard">2번</div>
+        <div class="componentCard">3번</div>
+        <div class="componentCard">4번</div>
+      </div>
+    </section>
+
+    <section class="contents">
+      <div class="contentBox">
+        <div class="contentTitle">반응형 웹이란?</div>
+
+        <div class="contentText">
+          여러 장치의 다양한 특성에 대응하는 하나의 웹 문서 또는 사이트로써<br />
+          브라우저의 크기에 실시간으로 반응하여 크기에 따라 레이아웃이 변하는
+          웹사이트이다.<br /><br />
+          즉, 하나의 소스 코드로 모든 스크린에 최적화된 웹 사이트를 구축할 수
+          있고<br />
+          디바이스 종류에 따라 웹페이지의 크기가 자동으로 재조정된다.
+        </div>
+        <div class="contentTitle">미디어쿼리 구문</div>
+        <div class="contentText">
+          <div class="codeSection">
+            <div class="code">
+              @media 미디어 타입 (조건(너비 및 높이)) {<br />
+              &emsp;(CSS 입력하는 부분)
+              <br />}
+            </div>
+          </div>
+          <p><br />예시</p>
+          <br />
+          <div class="codeSection">
+            <div class="code">
+              @media screen (max-width: 400px) {<br />
+              &emsp;body {<br />
+              &emsp;&emsp;color: red; <br />
+              &emsp;} <br />
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="contentTitle">미디어 타입</div>
+        <div class="contentText">
+          미디어 타입은 코드가 어떤 미디어를 위한 것인지 브라우저에 알려준다.<br /><br />
+          all : 모든 미디어 타입<br />print : 프린터 <br />screen : 컴퓨터 화면
+          <br />speech : 스크린 리더<br /><br />
+          <span class="highlight_yellow">screen이 가장 많이 쓰인다.</span>
+        </div>
+
+        <div class="contentTitle">방향성</div>
+        <div class="contentText">
+          세로 모드인지 가로 모드인지 검사하여 CSS 스타일을 주고 싶은 경우,<br />
+          <span class="highlight_bold">orientation</span>으로 검사 할 수
+          있다.<br />
+        </div>
+        <div class="codeSection">
+          <div class="code">
+            @media (orientation: landscape) {<br />
+            &emsp;body {<br />
+            &emsp;&emsp;color: red;<br />
+            &emsp;}<br />
+            }
+          </div>
+        </div>
+        <div class="contentText">
+          -> 장치가 가로 방향인 경우 텍스트 색상이 red로 바뀐다.
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
