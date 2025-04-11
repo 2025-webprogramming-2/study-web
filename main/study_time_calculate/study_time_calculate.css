@@ -55,30 +55,14 @@ meter {
     padding: 0;
 }
   
-  /* 배경 바 조정 (Webkit 기반 브라우저: Chrome, Edge, Safari) */
 meter::-webkit-meter-bar {
     background: #e0e0e0;
     border-radius: 12px;
     height: 25px;
 }
   
-  /* 채워진 부분 조정 - 가장 좋은 상태 */
 meter::-webkit-meter-optimum-value {
     background: #6485BE;
-    border-radius: 12px;
-    height: 25px;
-}
-  
-  /* 중간 상태 (옵션) */
-meter::-webkit-meter-suboptimum-value {
-    background: orange;
-    border-radius: 12px;
-    height: 25px;
-}
-  
-  /* 나쁜 상태 (옵션) */
-meter::-webkit-meter-even-less-good-value {
-    background: red;
     border-radius: 12px;
     height: 25px;
 }
