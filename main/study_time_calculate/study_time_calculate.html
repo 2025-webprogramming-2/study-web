@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="container_sc">
-        <h2>오늘의 목표 공부 시간은</h2>
+        <h2 id = "goalText">오늘의 목표 공부 시간은</h2>
         <input type="text" id="studyTimeGoal" placeholder="목표시간을 입력하세요.">
         <button class="button_sc" onclick="getStudyTimeGoal()">확인</button>
 
@@ -17,12 +17,12 @@
         <select id="startTimeSelect"></select>
         <h2>끝난 시간</h2>
         <select id="endTimeSelect"></select>
-        <button class="button_sc" onClick="calculateStudyTime(), UpdateStudyMeter();">공부한 시간 계산</button>
+        <button class="button_sc" onClick="calculateStudyTime(), UpdateStudyMeter();">공부한 시간 추가</button>
         <p id="result"></p>
 
         <!-- 현재 공부 시간 게이지 -->
         <h2>목표 달성량</h2>
-        <meter id="studyMeter" min="0" max="1" value="40"></meter>
+        <meter id="studyMeter" min="0" max="1" value="0"></meter>
         </div>
     </body>
 </html>

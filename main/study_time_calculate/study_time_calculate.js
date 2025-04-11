@@ -1,10 +1,13 @@
 var goal 
 let diff
+let current_value = 0
 
 function getStudyTimeGoal(){
     goal = document.getElementById('studyTimeGoal').value;
 
     console.log("목표 시간은:", goal);
+    document.getElementById('goalText').textContent =
+      `오늘의 목표 공부 시간은 ${goal}시간입니다.`
 }
 
 function fillTimeOptions(selectElement) {
@@ -46,17 +49,20 @@ function calculateStudyTime(){
     diff += 24 * 60;
   }
 
-  const hours = Math.floor(diff/60);
-  const minutes = diff % 60;
+  current_value += diff;
+  const hours = Math.floor(current_value/60);
+  const minutes = current_value % 60;
 
   document.getElementById('result').textContent =
     `총 공부한 시간은 ${hours}시간 ${minutes}분 입니다.`;
+  
 }
 
 function UpdateStudyMeter(){
-  study_value = diff / (Number(goal)*60);
+  study_value = current_value / (Number(goal)*60);
   document.getElementById('studyMeter').value = study_value;
 }
 // 1.목표치를 입력 받기
 // 2.공부한 시간을 입력받기-> 00:00~ 00:00 드롭다운 형식으로 시작시간, 마침시간 설정하면 자동으로 계산이 진행
 // 3.공부한 시간 / 목표치으로 퍼센티지 만들어서 표에 적용
+// 누적치를 적용해야함함
