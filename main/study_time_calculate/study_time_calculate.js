@@ -5,8 +5,6 @@ function getStudyTimeGoal(){
     goal = document.getElementById('studyTimeGoal').value;
 
     console.log("목표 시간은:", goal);
-
-    alert(goal);
 }
 
 function fillTimeOptions(selectElement) {
