@@ -41,10 +41,16 @@ input[type="text"],
     background-color: #3a64b5;
 }
 
-#result {
+#result{
     font-size: 16px;
     margin-top: 10px;
     font-weight: bold;
+}
+
+#leftStudy{
+    font-size:16px;
+    margin-top:10px;
+    color:rgb(1, 122, 102);
 }
 
 meter {
