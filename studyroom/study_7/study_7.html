@@ -50,24 +50,32 @@
 
         <div class="contentText">
           <span class="highlight_bold">&lt;div class="signup-form"&gt;</span>  -> 회원가입 폼 상자(signup-form 클래스)<br /> 
-            <span class="highlight_bold">&lt;h2&gt;회원가입&lt;/h2&gt;</span>  -> 회원가입 재목 표시<br /> 
-            <span class="highlight_bold">&lt;form&gt;</span>  -> 입력된 데이터를 서버에 보낼 수 있게 감싸주는 태그<br /> 
-            <span class="highlight_bold">...</span> <br />
-              <span class="highlight_bold">&lt;button type="submit"&gt;가입하기&lt;/button&gt;</span>  -> 가입 버튼, 눌렀을 때 폼 전송<br /> 
-              <span class="highlight_bold">&lt;/form&gt;</span> <br />
-                <span class="highlight_bold">&lt;/div&gt;</span> <br />
-        </div>
+          <span class="highlight_bold">&lt;h2&gt;회원가입&lt;/h2&gt;</span>  -> 회원가입 재목 표시<br /> 
+          <span class="highlight_bold">&lt;form&gt;</span>  -> 입력된 데이터를 서버에 보낼 수 있게 감싸주는 태그<br /> 
+          <span class="highlight_bold">...</span> <br />
+          <span class="highlight_bold">&lt;button type="submit"&gt;가입하기&lt;/button&gt;</span>  -> 가입 버튼, 눌렀을 때 폼 전송<br /> 
+          <span class="highlight_bold">&lt;/form&gt;</span> <br />
+          <span class="highlight_bold">&lt;/div&gt;</span> <br />
+          <br />
+          <br />
+          <span class="highlight_bold">&lt;label for="name"&gt;이름&lt;/label&gt;</span>  -> 이름이라는 글자를 보여줌<br />
+          <span class="highlight_bold">&lt;input type="text" id="name" name="name" required&gt;</span>  -> 실제 입력하는 칸<br />
+          <span class="highlight_yellow">-> 같은 방식으로 전화번호, 주소, 아이디, 비밀번호, 생일 등 입력칸이 있음!</span>
+          <br />
+          <br />
+          <br />
+          <span class="highlight_bold">.signup-form {</span>  -> signup-form 클래스 <br />
+          <span class="highlight_bold">background-color: white;</span>  -> 박스를 흰색으로  <br />
+          <span class="highlight_bold">padding: 30px;</span>  -> 안쪽 여백 <br />
+          <span class="highlight_bold">border-radius: 10px;</span>  -> 박스 모서리를 둥글게 <br />
+          <span class="highlight_bold">max-width: 400px;</span>  -> 최대 넓이 제한 <br />
+          <span class="highlight_bold">margin: auto;</span>  -> 가운데 정렬 <br />
+          <span class="highlight_bold">box-shadow: 0 0 10px rgba(0,0,0,0.1);}</span>  -> 그림자 효과 <br />
+          <br />
+          <br />
+          <span class="highlight_bold">.signup-form input { ... }</span>  -> 모든 입력칸(비밀번호, 텍스트) <br />
+          <span class="highlight_bold">.signup-form button { ... }</span>  -> 가입버튼
 
-        <div class="codeSection">
-          <div class="code">
-            &lt;h1&gt;h1내용&lt;/h1&gt; <br />
-            &lt;h3&gt;h3내용&lt;/h3&gt;
-          </div>
-          <div class="codeResult">
-            <!-- 이 부분에는 code 부분에 쓴 것을  &lt; &gt; 대신 실제 태그(< > </ >로 수정하면 됩니다-->
-            <h1>h1내용</h1>
-            <h3>h3내용</h3>
-          </div>
         </div>
       </div>
     </section>
