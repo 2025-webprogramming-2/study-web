@@ -97,3 +97,16 @@ body {
   font-weight: 500;
 }
 
+.heart {
+  font-size: 24px;
+  margin-left: auto;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.heart:hover {
+  transform: scale(1.2); /* 눌렀을 때 살짝 커지게 */
+}
+
