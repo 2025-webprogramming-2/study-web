@@ -1,0 +1,71 @@
+* {
+  margin: 0, auto;
+}
+.container {
+  max-width: 250px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  border: 5px solid #4d6ab2;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container > h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.memberBlock {
+  margin-bottom: 20px;
+}
+
+.memberBlock > p {
+  background-color: #66ccff;
+  width: 50px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 3px;
+  border: 2px solid #0099ff;
+}
+.resultContainer > p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.selectBlock,
+.resultBlock {
+  display: flex;
+}
+
+.timeBlock {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.timeBlock.selected {
+  background-color: #a0d8ef;
+}
+.resultBlock .timeBlock.level-1 {
+  background-color: #cceeff;
+}
+.resultBlock .timeBlock.level-2 {
+  background-color: #66ccff;
+}
+.resultBlock .timeBlock.level-3 {
+  background-color: #0099ff;
+}
+
+.timeLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.timeLabels span {
+  width: 50px;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
