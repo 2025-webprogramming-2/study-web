@@ -1,98 +1,131 @@
 body {
-    background-color: #e9f0ff;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  .container {
-    display: flex;
-    /* height: 100vh; */
-    gap: 40px;
-  }
-  
-  .goal-section, .study-room {
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    border: 5px solid #4D6AB2;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
-  }
+  background-color: #e9f0ff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  /* height: 100vh; */
+  gap: 40px;
+}
+
+.goal-section, .study-room {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  border: 5px solid #4D6AB2;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
+}
 
 
-  
-  .goal-section {
-    width: 250px;
-  }
-  
-  .goal-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .goal-section li {
-    background: #F9FBFF;
-    border: 2px solid #6a8bc3;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .study-room {
-    flex-grow: 1;
-    padding: 20px 120px; 
-    padding-bottom: 50px;
-  }
 
-  .study-room h2, .goal-section h2 {
-    margin-bottom: 50px;
-  }
-  
-  .component-card {
-    display: flex;
-    border: 2px solid #7B90C7;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: #F9FBFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    align-items: center;
-  }
-  
-  .image-box {
-    width: 200px;
-    height: 100px;
-    background-color: #d0d0d0;
-    margin-right: 15px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 50px;
-  }
-  
-  .component-content{
-    padding-left: 30px;
-  }
+.goal-section {
+  width: 250px;
+}
 
-  .component-content h3 {
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
+.goal-section ul {
+  list-style: none;
+  padding: 0;
+}
 
-  .study-room p {
-    margin: 4px 0;
-  }
+.goal-section li {
+  background: #F9FBFF;
+  border: 2px solid #6a8bc3;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-  .component-code {
-    margin-right: 5px;
-    margin-top: 5px;
-    padding: 4px 8px;
-    border: 1px solid #7B90C7;
-    border-radius: 5px;
-    background-color: #F5F5F5;
-    color: #4D6AB2;
-    font-weight: 500;
-  }
+.study-room {
+  flex-grow: 1;
+  padding: 20px 120px; 
+  padding-bottom: 50px;
+}
+
+.study-room h2, .goal-section h2 {
+  margin-bottom: 50px;
+}
+
+.component-card {
+  display: flex;
+  border: 2px solid #7B90C7;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #F9FBFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  align-items: center;
+}
+
+.image-box {
+  width: 200px;
+  height: 100px;
+  background-color: #d0d0d0;
+  margin-right: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.component-content{
+  padding-left: 30px;
+}
+
+.component-content h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.study-room p {
+  margin: 4px 0;
+}
+
+.component-code {
+  margin-right: 5px;
+  margin-top: 5px;
+  padding: 4px 8px;
+  border: 1px solid #7B90C7;
+  border-radius: 5px;
+  background-color: #F5F5F5;
+  color: #4D6AB2;
+  font-weight: 500;
+}
+
+.heart {
+  font-size: 24px;
+  margin-left: auto;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.heart:hover {
+  transform: scale(1.2); /* 눌렀을 때 살짝 커지게 */
+}
+
+.quote-box {
+  background-color: #ffffff;
+  border: 5px solid #4D6AB2;
+  border-radius: 20px;
+  padding: 20px 30px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin: 20px auto;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#quote {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  transition: color 0.3s ease;
+}
