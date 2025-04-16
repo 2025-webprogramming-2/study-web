@@ -110,3 +110,23 @@ body {
   transform: scale(1.2); /* 눌렀을 때 살짝 커지게 */
 }
 
+.quote-box {
+  background-color: #ffffff;
+  border: 5px solid #4D6AB2;
+  border-radius: 20px;
+  padding: 20px 30px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin: 20px auto;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#quote {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  transition: color 0.3s ease;
+}
+

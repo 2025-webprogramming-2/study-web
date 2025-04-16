@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./study_9.css" rel="stylesheet" />
+    <title>스터디</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="../../main/main.html"
+        ><img src="../../img/arrow.png" alt="뒤로가기" class="arrow_icon"
+      /></a>
+      <h1 class="topTitle">자바스크립트로 하트만들기</h1>
+    </header>
+
+    <section class="component">
+        <span class="heart">🤍</span>
+    </section>
+
+    <section class="contents">
+      <div class="contentBox">
+        <div class="contentTitle">하트</div>
+
+        <div class="contentText">
+            <span class="highlight_bold">document.addEventListener("DOMContentLoaded", function () {</span><br />
+            -> HTML이 다 로드된 후에 자바스크립트를 실행하게 한다<br />
+            <br />
+            <br />
+            <span class="highlight_bold">const hearts = document.querySelectorAll(".heart");</span><br />
+            -> 클래스 이름이 heart인 요소들을 모두 찾아서 hearts라는 배열로 저장한다<br />
+            <br />
+            <br />
+            <span class="highlight_bold">hearts.forEach((heart, index) => {</span><br />
+            -> 배열 hearts 안에 있는 각각의 하트를 하나씩 꺼내서 처리<br />
+            <br />
+            <br />
+            <span class="highlight_bold">const key = `liked_${index}`;</span><br />
+            각 하트마다 다른 이름의 저장공간을 만든다<br />
+            -> liked_0, liked_1 이런 식으로 key만들기 <br />
+            <br />
+            <br />
+            <span class="highlight_bold">if (localStorage.getItem(key) === "true") {</span><br />
+            <span class="highlight_bold">heart.textContent = "❤️";</span><br />
+            <span class="highlight_bold">}</span>
+            <br />
+            -> 이전에 하트를 눌렀다면 -> true -> ❤️로 바꿔준다
+            <br />
+            <br />
+            <br />
+            <span class="highlight_bold">heart.addEventListener("click", function (event) {</span><br />
+            하트를 눌렀다면 아래 코드들이 실행된다.<br />
+            <span class="highlight_bold">const isLiked = heart.textContent === "❤️";</span>
+            <span class="highlight_bold">heart.textContent = isLiked ? "🤍" : "❤️";</span>
+            <br />
+            지금 하트가 ❤️이면 → 🤍로 바꾸고<br />
+            아니면 → ❤️로 바꾼다<br />
+            <br />
+            <br />
+            <span class="highlight_bold">if (isLiked) {</span><br />
+            <span class="highlight_bold">localStorage.removeItem(key);</span><br />
+            <span class="highlight_bold">} else {</span><br />
+            <span class="highlight_bold">localStorage.setItem(key, "true");</span><br />
+            <span class="highlight_bold">}</span><br />
+            ->localStorage 저장 또는 삭제<br />
+            ❤️이면 좋아요를 없앰 → 저장도 삭제<br />
+            🤍에서 ❤️로 바뀌면 → 저장도 해둬
+        </div>
+      </div>
+    </section>
+    <script src="study_9.js"></script>
+  </body>
+</html>
