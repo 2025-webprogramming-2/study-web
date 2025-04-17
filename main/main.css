@@ -129,3 +129,101 @@ body {
   color: #333;
   transition: color 0.3s ease;
 }
+
+/* 왼쪽사이드바 */
+.left-section {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.widget-box, .goal-box{
+  background-color:white;
+  border: 2px solid #4b73b8;
+  border-radius: 12px;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+/* 공부 시간 계산기 */
+.container_sc {
+  background-color: #F9FBFF;
+  border-radius: 20px;
+  padding: 40px;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.h2_sc {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input[type="text"]{
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.select_sc {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.button_sc {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #6485BE;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button_sc:hover {
+  background-color: #3a64b5;
+}
+
+#result{
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#leftStudy{
+  font-size:16px;
+  margin-top:10px;
+  color:rgb(1, 122, 102);
+}
+
+meter {
+  width: 100%;
+  height: 25px;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+meter::-webkit-meter-bar {
+  background: #e0e0e0;
+  border-radius: 12px;
+  height: 25px;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: #6485BE;
+  border-radius: 12px;
+  height: 25px;
+}
