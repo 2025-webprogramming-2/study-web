@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./study_13.css" rel="stylesheet" />
+    <title>스터디</title>
+    <script src="../../main/meeting_time.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="../../main/main.html"
+        ><img src="../../img/arrow.png" alt="뒤로가기" class="arrow_icon"
+      /></a>
+      <h1 class="topTitle">웬투밋 기능</h1>
+    </header>
+
+    <section class="component">
+      <div class="container">
+        <h1>WHEN 2 MEET</h1>
+
+        <div class="memberBlock" data-member="유민">
+          <p>유민</p>
+          <div class="selectBlock"></div>
+          <div class="timeLabels"></div>
+        </div>
+        <div class="memberBlock" data-member="혁규">
+          <p>혁규</p>
+          <div class="selectBlock"></div>
+          <div class="timeLabels"></div>
+        </div>
+        <div class="memberBlock" data-member="시온">
+          <p>시온</p>
+          <div class="selectBlock"></div>
+          <div class="timeLabels"></div>
+        </div>
+
+        <div class="resultContainer">
+          <p>우리 만날 시간은?</p>
+          <div class="resultBlock"></div>
+          <div class="timeLabels resultLabel"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contents">
+      <div class="contentBox">
+        <div class="contentTitle">1. 기본 데이터 구조</div>
+        <img
+          src="./htmlimg1.png"
+          alt="기본 데이터 구조 코드"
+          style="width: 600px"
+        />
+        <div class="contentText">
+          <p>
+            <span class="inlineCode">availability</span> : 각 멤버가 어떤 시간에
+            가능한지 저장하는 객체
+          </p>
+          <p>
+            <span class="inlineCode">isDragging</span> : 마우스 드래그 중인지
+            체크
+          </p>
+        </div>
+
+        <div class="contentTitle">2. 선택 가능 여부 초기화</div>
+        <img
+          src="./htmlimg2.png"
+          alt="선택 가능 여부 초기화"
+          style="width: 600px"
+        />
+        <div class="contentText">
+          <span class="inlineCode">availability[시온][14] = false</span>
+          <p>
+            → 이런 식으로 멤버별 가능 시간 관리를 하는데 처음에는 모든 시간
+            불가능하도록 초기화
+          </p>
+        </div>
+
+        <div class="contentTitle">3. 각 멤버의 시간 선택 블록 만들기</div>
+        <img
+          src="./htmlimg3.png"
+          alt="멤버의 시간 선택 블록"
+          style="width: 600px"
+        />
+        <div class="contentText">
+          <p class="highlight_green">// 1</p>
+          <p>
+            멤버블록 요소를 가져오고, 지금 처리 중인 사용자가 누구인지 알아냄<br />
+            각 멤버 블록 안에 있는 <span class="inlineCode">.selectBlock</span>
+            요소에 시간 선택 칸들 넣음
+          </p>
+          <br />
+          <p class="highlight_green">// 2</p>
+          <p>
+            각각의 시간에 대해 하나의 블록 만듦<br />
+            <span class="inlineCode">data-hour="14"</span> 이런 속성도 추가 →
+            나중에 찾기 쉽게 하기 위해
+          </p>
+          <br />
+
+          <p class="highlight_green">// 3</p>
+          <p>
+            마우스를 누르면 드래그 시작 <br />
+            마우스 드래그 중일 때만 반응해서 시간 연속적으로 선택 가능
+          </p>
+          <br />
+
+          <p class="highlight_green">// 4</p>
+          <p>
+            DOM에 추가 → <span class="inlineCode">div.timeBlock</span> 을 실제
+            div에 넣음
+          </p>
+        </div>
+
+        <div class="contentTitle">4. 공통 가능 시간 계산</div>
+        <img
+          src="./htmlimg4.png"
+          alt="공통 가능 시간 계산 코드"
+          style="width: 600px"
+        />
+        <div class="contentText">
+          각 시간마다 몇 명 가능한지 카운트<br />
+          <span class="inlineCode">level-${count}</span> : 각 단계별 클래스
+          만들어서 색상 표시
+        </div>
+
+        <div class="contentTitle">DOMContentLoaded</div>
+        <div class="contentText">
+          HTML 문서가 완전히 로드되고 DOM 트리가 완성됐을 때 실행되는 이벤트
+          <br />→ JavaScript가 실행될 때 HTML 요소들이 모두 존재하는지 보장
+        </div>
+        <img
+          src="./htmlimg5.png"
+          alt="DOMContentLoaded 코드"
+          style="width: 600px"
+        />
+        <div class="contentText">
+          -> <span class="inlineCode">.memberBlock</span> 을 하나하나 돌면서
+          <span class="inlineCode">.timeLabels</span> 요소를 찾아 시간 레이블
+          생성 <br /><br />
+          <p class="highlight_bold">DOMContentLoaded로 만든 이유</p>
+
+          <span class="inlineCode">createTimeLabels</span> 함수를 통해 각 멤버별
+          레이블, 결과 레이블을 같은 방식으로 불러옴 → 재사용<br />
+          HTML이 모두 준비됐을 때 실행되도록 함<br />
+          → 만약 &lt;div&gt;같은 요소가 브라우저에 렌더링이 되지 않았다면
+          null값이 나올 수 있기 때문
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
