@@ -4,254 +4,339 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>스터디</title>
-    <link rel="stylesheet" link href="main.css">
-    <script src="heart.js"></script>
+
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="meeting_time.css" />
+    <link rel="stylesheet" href="study_time_calculate.css" />
+
+    <script src="heart.js" defer></script>
+    <script src="meeting_time.js" defer></script>
+    <script src="study_time_calculate.js" defer></script>
   </head>
   <body>
     <div class="quote-box">
       <p id="quote">명언이 여기에 나와요</p>
     </div>
+
     <div class="container">
-      <!-- 목표영역 -->
       <aside class="left-section">
+        <!--웬투밋-->
         <div class="widget-box">
-          <head>
-            <meta charset="UTF-8" />
-            <title>meeting_time</title>
-            <script src="meeting_time.js" defer></script>
-            <link rel="stylesheet" href="meeting_time.css" />
-          </head>
-          <body>
-            <div class="containerw">
-              <h1>WHEN 2 MEET</h1>
-        
-              <div class="memberBlock" data-member="유민">
-                <p>유민</p>
-                <div class="selectBlock"></div>
-                <div class="timeLabels"></div>
-              </div>
-              <div class="memberBlock" data-member="혁규">
-                <p>혁규</p>
-                <div class="selectBlock"></div>
-                <div class="timeLabels"></div>
-              </div>
-              <div class="memberBlock" data-member="시온">
-                <p>시온</p>
-                <div class="selectBlock"></div>
-                <div class="timeLabels"></div>
-              </div>
-        
-              <div class="resultContainer">
-                <p>우리 만날 시간은?</p>
-                <div class="resultBlock"></div>
-                <div class="timeLabels resultLabel"></div>
-              </div>
+          <div class="containerw">
+            <h1>WHEN 2 MEET</h1>
+
+            <div class="memberBlock" data-member="유민">
+              <p>유민</p>
+              <div class="selectBlock"></div>
+              <div class="timeLabels"></div>
             </div>
-          </body>
+            <div class="memberBlock" data-member="혁규">
+              <p>혁규</p>
+              <div class="selectBlock"></div>
+              <div class="timeLabels"></div>
+            </div>
+            <div class="memberBlock" data-member="시온">
+              <p>시온</p>
+              <div class="selectBlock"></div>
+              <div class="timeLabels"></div>
+            </div>
+
+            <div class="resultContainer">
+              <p>우리 만날 시간은?</p>
+              <div class="resultBlock"></div>
+              <div class="timeLabels resultLabel"></div>
+            </div>
+          </div>
         </div>
 
+        <!-- 목표 공부 시간 -->
         <div class="goal-box">
-          <head>
-            <!-- defer은 자바스크립트가 html을 다 읽고 나서 실행되게 만듬 -->
-            <script src="study_time_calculate.js" defer></script>
-            <link rel="stylesheet" href="study_time_calculate.css">          
-          </head>
-          <body>
-            <!-- <div class="container_sc"> -->
-            <h2 id = "goalText">오늘의 목표 공부 시간은</h2>
-            <input type="text" id="studyTimeGoal" placeholder="목표시간을 입력하세요.">
-            <button class="button_sc" onclick="getStudyTimeGoal()">확인</button>
-    
-            <h2>시작 시간</h2>
-            <select id="startTimeSelect"></select>
-            <h2>끝난 시간</h2>
-            <select id="endTimeSelect"></select>
-            <button class="button_sc" onClick="calculateStudyTime(), UpdateStudyMeter();">공부한 시간 추가</button>
-            <p id="result"></p>
-    
-            <!-- 현재 공부 시간 게이지 -->
-            <h2>목표 달성량</h2>
-            <meter id="studyMeter" min="0" max="1" value="0"></meter>
-            <p id ="leftStudy"></p>
-            <!-- </div> -->
-          </body>
+          <h2 id="goalText">오늘의 목표 공부 시간은</h2>
+          <input
+            type="text"
+            id="studyTimeGoal"
+            placeholder="목표시간을 입력하세요."
+          />
+          <button class="button_sc" onclick="getStudyTimeGoal()">확인</button>
+
+          <h2>시작 시간</h2>
+          <select id="startTimeSelect"></select>
+
+          <h2>끝난 시간</h2>
+          <select id="endTimeSelect"></select>
+
+          <button
+            class="button_sc"
+            onclick="calculateStudyTime(); UpdateStudyMeter();"
+          >
+            공부한 시간 추가
+          </button>
+          <p id="result"></p>
+
+          <!-- 현재 공부 시간 게이지 -->
+          <h2>목표 달성량</h2>
+          <meter id="studyMeter" min="0" max="1" value="0"></meter>
+          <p id="leftStudy"></p>
         </div>
       </aside>
 
       <!-- 스터디룸 영역 -->
-      <main class = "study-room">
+      <main class="study-room">
         <h2>스터디룸</h2>
 
-        <a href="../studyroom/study_1/study_1.html" class="component-card" style="text-decoration: none; color: inherit;">
-          <div class="image-box"></div>
+        <a
+          href="../studyroom/study_1/study_1.html"
+          class="component-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="image-box">
+            <img src="./img/studyImg_1.png" alt="스터디 이미지" />
+          </div>
           <div class="component-content">
             <h3>반응*상태*구조 선택자</h3>
-            <p>HTML :
+            <div>
+              HTML :
               <button class="component-code">반응 선택자</button>
               <button class="component-code">구조 선택자</button>
-            </p>
-            <p>CSS :
+            </div>
+            <div>
+              CSS :
               <button class="component-code">color</button>
               <button class="component-code">cursor</button>
               <button class="component-code">transition</button>
-            </p>
+            </div>
           </div>
           <span class="heart">🤍</span>
         </a>
-        <a href="../studyroom/study_2/study_2.html" class="component-card" style="text-decoration: none; color: inherit;">
-          <div class="image-box"></div>
+        <a
+          href="../studyroom/study_2/study_2.html"
+          class="component-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="image-box">
+            <img src="./img/studyImg_2.png" alt="스터디 이미지" />
+          </div>
           <div class="component-content">
             <h3>테이블 태그</h3>
-            <p>HTML : <button class="component-code">테이블 태그</button></p>
-            <p>CSS :
+            <div>
+              HTML : <button class="component-code">테이블 태그</button>
+            </div>
+            <div>
+              CSS :
               <button class="component-code">overflow</button>
               <button class="component-code">color</button>
               <button class="component-code">display</button>
-            </p>
+            </div>
           </div>
           <span class="heart">🤍</span>
         </a>
-        <a href="../studyroom/study_3/study_3.html" class="component-card" style="text-decoration: none; color: inherit;">
-          <div class="image-box"></div>
+        <a
+          href="../studyroom/study_3/study_3.html"
+          class="component-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="image-box">
+            <img src="./img/studyImg_3.png" alt="스터디 이미지" />
+          </div>
           <div class="component-content">
             <h3>공부 시간 계산기</h3>
-            <p>HTML : 
+            <div>
+              HTML :
               <button class="component-code">input</button>
               <button class="component-code">defer</button>
               <button class="component-code">select</button>
-            <p>JS :
-              <button class="component-code">반복문</button>
-              <button class="component-code">.toString().padStart(x, 't')</button></p>
-            </p>
+              <div>
+                JS :
+                <button class="component-code">반복문</button>
+                <button class="component-code">
+                  .toString().padStart(x, 't')
+                </button>
+              </div>
+            </div>
           </div>
           <span class="heart">🤍</span>
         </a>
-        <a href="../studyroom/study_6/study_6.html" class="component-card" style="text-decoration: none; color: inherit;">
-          <div class="image-box"></div>
+        <a
+          href="../studyroom/study_6/study_6.html"
+          class="component-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="image-box">
+            <img src="./img/studyImg_6.png" alt="스터디 이미지" />
+          </div>
           <div class="component-content">
             <h3>로그인 컴포넌트</h3>
-            <p>HTML : <button class="component-code">input</button></p>
-            <p>CSS :
+            <div>HTML : <button class="component-code">input</button></div>
+            <div>
+              CSS :
               <button class="component-code">선택자</button>
               <button class="component-code">color 속성</button>
               <button class="component-code">display 속성</button>
-            </p>
+            </div>
           </div>
           <span class="heart">🤍</span>
         </a>
-        <a href="../studyroom/study_7/study_7.html" class="component-card" style="text-decoration: none; color: inherit;">
-          <div class="image-box"></div>
+        <a
+          href="../studyroom/study_7/study_7.html"
+          class="component-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="image-box">
+            <img src="./img/studyImg_7.png" alt="스터디 이미지" />
+          </div>
           <div class="component-content">
             <h3>회원가입</h3>
-            <p>HTML : <button class="component-code">input</button>
+            <div>
+              HTML : <button class="component-code">input</button>
               <button class="component-code">label</button>
               <button class="component-code">button</button>
-            </p>
-            <p>CSS :
+            </div>
+            <div>
+              CSS :
               <button class="component-code">Arial, sans-serif</button>
               <button class="component-code">color 속성</button>
               <button class="component-code">display 속성</button>
-            </p>
+            </div>
           </div>
           <span class="heart">🤍</span>
         </a>
-        <a href="../studyroom/study_8/study_8.html" class="component-card" style="text-decoration: none; color: inherit;">
-          <div class="image-box"></div>
+        <a
+          href="../studyroom/study_8/study_8.html"
+          class="component-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="image-box">
+            <img src="./img/studyImg_8.png" alt="스터디 이미지" />
+          </div>
           <div class="component-content">
             <h3>랜덤명언박스</h3>
-            <p>HTML : <button class="component-code">flex</button>
-            </p>
-            <p>JS :
+            <div>HTML : <button class="component-code">flex</button></div>
+            <div>
+              JS :
               <button class="component-code">Math.random()</button>
               <button class="component-code">Math.floor()</button>
-            </p>
+            </div>
           </div>
           <span class="heart">🤍</span>
         </a>
-        <a href="../studyroom/study_9/study_9.html" class="component-card" style="text-decoration: none; color: inherit;">
-          <div class="image-box"></div>
+        <a
+          href="../studyroom/study_9/study_9.html"
+          class="component-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="image-box">
+            <img src="./img/studyImg_9.png" alt="스터디 이미지" />
+          </div>
           <div class="component-content">
             <h3>하트</h3>
-            <p>HTML : <button class="component-code">button</button></p>
-            <p>CSS :
+            <div>HTML : <button class="component-code">button</button></div>
+            <div>
+              CSS :
               <button class="component-code">addEventListener</button>
               <button class="component-code">foreach</button>
               <button class="component-code">display 속성</button>
-            </p>
+            </div>
           </div>
           <span class="heart">🤍</span>
         </a>
-        <a href="../studyroom/study_11/study_11.html" class="component-card" style="text-decoration: none; color: inherit;">
-          <div class="image-box"></div>
+        <a
+          href="../studyroom/study_11/study_11.html"
+          class="component-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="image-box">
+            <img src="./img/studyImg_11.png" alt="스터디 이미지" />
+          </div>
           <div class="component-content">
             <h3>transition</h3>
-            <p>HTML : <button class="component-code">button</button></p>
-            <p>CSS :
+            <div>HTML : <button class="component-code">button</button></div>
+            <div>
+              CSS :
               <button class="component-code">transition</button>
               <button class="component-code">ease</button>
               <button class="component-code">display 속성</button>
-            </p>
+            </div>
           </div>
           <span class="heart">🤍</span>
         </a>
-        <a href="../studyroom/study_12/study_12.html" class="component-card" style="text-decoration: none; color: inherit;">
-          <div class="image-box"></div>
+        <a
+          href="../studyroom/study_12/study_12.html"
+          class="component-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="image-box">
+            <img src="./img/studyImg_12.png" alt="스터디 이미지" />
+          </div>
           <div class="component-content">
             <h3>웹/데스크탑 뷰</h3>
-            <p>HTML : <button class="component-code">flex</button></p>
-            <p>CSS :
+            <div>HTML : <button class="component-code">flex</button></div>
+            <div>
+              CSS :
               <button class="component-code">orientation</button>
-            </p>
+            </div>
           </div>
           <span class="heart">🤍</span>
         </a>
-        <a href="../studyroom/study_13/study_13.html" class="component-card" style="text-decoration: none; color: inherit;">
-          <div class="image-box"></div>
+        <a
+          href="../studyroom/study_13/study_13.html"
+          class="component-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="image-box">
+            <img src="./img/studyImg_13.png" alt="스터디 이미지" />
+          </div>
           <div class="component-content">
-            <h3>study_13</h3>
-            <p>HTML : <button class="component-code">input</button></p>
-            <p>CSS :
-              <button class="component-code">선택자</button>
-              <button class="component-code">color 속성</button>
-              <button class="component-code">display 속성</button>
-            </p>
+            <h3>웬투밋 기능</h3>
+            <div>HTML : <button class="component-code">input</button></div>
+            <div>
+              JS :
+              <button class="component-code">DOMContentLoaded</button>
+              <button class="component-code">addEventListener</button>
+              <button class="component-code">classList.add</button>
+            </div>
           </div>
           <span class="heart">🤍</span>
         </a>
       </main>
     </div>
+
+    <!-- 명언 script -->
+    <script>
+      const quotes = [
+        "공부는 배신하지 않는다.",
+        "포기하지 마라, 끝까지 해보자.",
+        "지금 흘리는 땀은 내일의 자산이다.",
+        "오늘의 노력이 내일의 나를 만든다.",
+        "작은 습관이 큰 변화를 만든다.",
+        "실패는 성공의 어머니이다.",
+        "계속하는 자가 이긴다.",
+        "너라면 할 수 있어!",
+        "천천히 가도 포기하지 마라.",
+        "끝까지 가는 사람이 결국 승자다.",
+        "늦었다고 생각했을 때가 진짜 너무 늦었다.",
+        "권유민, 이시온, 신혁규 파이팅!",
+      ];
+
+      const softColors = [
+        "#FFB6B9",
+        "#FFDAC1",
+        "#E2F0CB",
+        "#B5EAD7",
+        "#C7CEEA",
+        "#FAD0C3",
+      ];
+
+      const quoteElement = document.getElementById("quote");
+
+      function showRandomQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const randomColorIndex = Math.floor(Math.random() * softColors.length);
+        quoteElement.textContent = quotes[randomIndex];
+        quoteElement.style.color = softColors[randomColorIndex];
+      }
+
+      showRandomQuote();
+      setInterval(showRandomQuote, 5000);
+    </script>
   </body>
 </html>
-
-<script>
-  const quotes = [
-    "공부는 배신하지 않는다.",
-    "포기하지 마라, 끝까지 해보자.",
-    "지금 흘리는 땀은 내일의 자산이다.",
-    "오늘의 노력이 내일의 나를 만든다.",
-    "작은 습관이 큰 변화를 만든다.",
-    "실패는 성공의 어머니이다.",
-    "계속하는 자가 이긴다.",
-    "너라면 할 수 있어!",
-    "천천히 가도 포기하지 마라.",
-    "끝까지 가는 사람이 결국 승자다.",
-    "늦었다고 생각했을 때가 진짜 너무 늦었다.",
-    "권유민, 이시온, 신혁규 파이팅!"
-  ];
-
-  const softColors = [
-    "#FFB6B9", "#FFDAC1", "#E2F0CB", "#B5EAD7", "#C7CEEA", "#FAD0C3"
-  ];
-
-  const quoteElement = document.getElementById("quote");
-
-  function showRandomQuote() {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    const randomColorIndex = Math.floor(Math.random() * softColors.length);
-    quoteElement.textContent = quotes[randomIndex];
-    quoteElement.style.color = softColors[randomColorIndex];
-  }
-
-  showRandomQuote();
-  setInterval(showRandomQuote, 5000);
-</script>

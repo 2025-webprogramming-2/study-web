@@ -1,25 +1,26 @@
 body {
   background-color: #e9f0ff;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 20px;
 }
 
 .container {
   display: flex;
+  align-items: center;
   /* height: 100vh; */
   gap: 40px;
 }
 
-.goal-section, .study-room {
+.goal-section,
+.study-room {
   background-color: white;
   padding: 20px;
   border-radius: 20px;
-  border: 5px solid #4D6AB2;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
+  border: 5px solid #4d6ab2;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  height: 1350px;
 }
-
-
 
 .goal-section {
   width: 250px;
@@ -31,7 +32,7 @@ body {
 }
 
 .goal-section li {
-  background: #F9FBFF;
+  background: #f9fbff;
   border: 2px solid #6a8bc3;
   border-radius: 10px;
   padding: 10px;
@@ -41,21 +42,24 @@ body {
 
 .study-room {
   flex-grow: 1;
-  padding: 20px 120px; 
+  padding: 20px 120px;
   padding-bottom: 50px;
+  height: 1135px;
+  overflow-y: auto;
 }
 
-.study-room h2, .goal-section h2 {
+.study-room h2,
+.goal-section h2 {
   margin-bottom: 50px;
 }
 
 .component-card {
   display: flex;
-  border: 2px solid #7B90C7;
+  border: 2px solid #7b90c7;
   border-radius: 15px;
   margin-bottom: 15px;
   padding: 10px;
-  background-color: #F9FBFF;
+  background-color: #f9fbff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   align-items: center;
@@ -63,20 +67,25 @@ body {
 
 .image-box {
   width: 200px;
-  height: 100px;
-  background-color: #d0d0d0;
+  height: 150px;
+  overflow: hidden;
   margin-right: 15px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 50px;
 }
 
-.component-content{
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.component-content {
   padding-left: 30px;
 }
-
 
 .component-content h3 {
   margin-top: 0;
@@ -91,10 +100,10 @@ body {
   margin-right: 5px;
   margin-top: 5px;
   padding: 4px 8px;
-  border: 1px solid #7B90C7;
+  border: 1px solid #7b90c7;
   border-radius: 5px;
-  background-color: #F5F5F5;
-  color: #4D6AB2;
+  background-color: #f5f5f5;
+  color: #4d6ab2;
   font-weight: 500;
 }
 
@@ -113,7 +122,7 @@ body {
 
 .quote-box {
   background-color: #ffffff;
-  border: 5px solid #4D6AB2;
+  border: 5px solid #4d6ab2;
   border-radius: 20px;
   padding: 20px 30px;
   width: 100%;
@@ -126,7 +135,7 @@ body {
 #quote {
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   color: #333;
   transition: color 0.3s ease;
 }
@@ -139,17 +148,18 @@ body {
   gap: 20px;
 }
 
-.widget-box, .goal-box{
-  background-color:white;
-  border: 2px solid #4b73b8;
-  border-radius: 12px;
+.widget-box,
+.goal-box {
+  background-color: white;
+  border-radius: 20px;
+  border: 5px solid #4d6ab2;
   padding: 20px;
   flex-shrink: 0;
 }
 
 /* 공부 시간 계산기 */
 .container_sc {
-  background-color: #F9FBFF;
+  background-color: #f9fbff;
   border-radius: 20px;
   padding: 40px;
   width: 200px;
@@ -163,7 +173,7 @@ body {
   font-weight: bold;
 }
 
-input[type="text"]{
+input[type="text"] {
   width: 90%;
   padding: 10px;
   margin-bottom: 20px;
@@ -185,7 +195,7 @@ input[type="text"]{
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background-color: #6485BE;
+  background-color: #6485be;
   color: white;
   font-size: 16px;
   border: none;
@@ -197,16 +207,16 @@ input[type="text"]{
   background-color: #3a64b5;
 }
 
-#result{
+#result {
   font-size: 16px;
   margin-top: 10px;
   font-weight: bold;
 }
 
-#leftStudy{
-  font-size:16px;
-  margin-top:10px;
-  color:rgb(1, 122, 102);
+#leftStudy {
+  font-size: 16px;
+  margin-top: 10px;
+  color: rgb(1, 122, 102);
 }
 
 meter {
@@ -224,7 +234,7 @@ meter::-webkit-meter-bar {
 }
 
 meter::-webkit-meter-optimum-value {
-  background: #6485BE;
+  background: #6485be;
   border-radius: 12px;
   height: 25px;
 }
