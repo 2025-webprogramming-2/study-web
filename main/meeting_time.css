@@ -1,15 +1,6 @@
 * {
   margin: 0, auto;
 }
-.containerw {
-  max-width: 250px;
-  margin: auto;
-  background-color: white;
-  padding: 20px;
-  border-radius: 20px;
-  border: 5px solid #4d6ab2;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-}
 
 .containerw > h1 {
   font-size: 20px;
@@ -20,12 +11,12 @@
 }
 
 .memberBlock > p {
-  background-color: #66ccff;
+  /* background-color: #66ccff; */
   width: 50px;
   text-align: center;
   border-radius: 10px;
   padding: 3px;
-  border: 2px solid #0099ff;
+  border: 2px solid #4d6ab2;
 }
 .resultContainer > p {
   font-size: 20px;
@@ -45,16 +36,16 @@
 }
 
 .timeBlock.selected {
-  background-color: #a0d8ef;
+  background-color: #cad8f8;
 }
 .resultBlock .timeBlock.level-1 {
-  background-color: #cceeff;
+  background-color: #cad8f8;
 }
 .resultBlock .timeBlock.level-2 {
-  background-color: #66ccff;
+  background-color: #8097ce;
 }
 .resultBlock .timeBlock.level-3 {
-  background-color: #0099ff;
+  background-color: #4d6ab2;
 }
 
 .timeLabels {
