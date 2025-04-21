@@ -8,16 +8,16 @@
   </head>
   <body>
     <header class="topbar">
-      <a href="../../main/main.html"
+      <a href="../../index.html"
         ><img src="../../img/arrow.png" alt="뒤로가기" class="arrow_icon"
       /></a>
       <h1 class="topTitle">자바스크립트로 랜덤명언박스만들기</h1>
     </header>
 
     <section class="component">
-        <div class="quote-box">
-            <p id="quote">명언이 여기에 나와요</p>
-        </div>
+      <div class="quote-box">
+        <p id="quote">명언이 여기에 나와요</p>
+      </div>
     </section>
 
     <section class="contents">
@@ -25,46 +25,64 @@
         <div class="contentTitle">랜덤명언박스</div>
 
         <div class="contentText">
-            <span class="highlight_bold">quotes = [</span><br />
-            <span class="highlight_bold">"공부는 배신하지 않는다.",</span><br />
-            <span class="highlight_bold">"포기하지 마라, 끝까지 해보자.",</span><br />
-            <span class="highlight_bold">...</span><br />
-            <span class="highlight_bold">];</span><br />
-            <br />
-            <span class="highlight_bold">softColors = [</span><br />
-            <span class="highlight_bold">"#FFB6B9",</span><br />
-            <span class="highlight_bold">"#FFDAC1",</span><br />
-            <span class="highlight_bold">...</span><br />
-            <span class="highlight_bold">];</span>
-            <br />
-            <br />
-            -> 공부 명언과 색을 모아놓은 quotes와 softColors라는<span class="highlight_yellow">배열</span> 생성
-            <br />
-            <br />
-            <br />
-            <span class="highlight_bold">quoteElement = document.getElementById("quote");</span>
-            <br />
-            <br />
-            -> id="quote"로 된 곳을 가져와서 그안에 문구를 넣을 준비를 해놓는 코드
-            <br />
-            <br />
-            <br />
-            <span class="highlight_bold">function showRandomQuote() {</span><br />
-            <span class="highlight_bold">randomIndex = Math.floor(Math.random() * quotes.length);</span><br />
-            <span class="highlight_bold">const randomColorIndex = Math.floor(Math.random() * softColors.length);</span><br />
-            <span class="highlight_bold">quoteElement.textContent = quotes[randomIndex];</span><br />
-            <span class="highlight_bold">quoteElement.style.color = softColors[randomColorIndex];</span><br />
-            <span class="highlight_bold">}</span><br />
-            <br />
-            Math.random() -> 0부터 1 사이의 랜덤 숫자를 만들어줌<br />
-            Math.floor() -> 소수점을 버리고 정수로 만들어줌<br />
-            quotes.length -> 문구가 총 몇 개인지 알려줌<br />
-            randomIndex -> 문구 중 하나를 고르는 랜덤 번호<br />
-            randomColorIndex -> 색깔 중 하나를 고르는 랜덤 번호<br />
-            <br />
-            <br />
-            <span class="highlight_bold">setInterval(showRandomQuote, 5000);</span>  -> 5초마다 showRandomQuote을 실행
-
+          <span class="highlight_bold">quotes = [</span><br />
+          <span class="highlight_bold">"공부는 배신하지 않는다.",</span><br />
+          <span class="highlight_bold">"포기하지 마라, 끝까지 해보자.",</span
+          ><br />
+          <span class="highlight_bold">...</span><br />
+          <span class="highlight_bold">];</span><br />
+          <br />
+          <span class="highlight_bold">softColors = [</span><br />
+          <span class="highlight_bold">"#FFB6B9",</span><br />
+          <span class="highlight_bold">"#FFDAC1",</span><br />
+          <span class="highlight_bold">...</span><br />
+          <span class="highlight_bold">];</span>
+          <br />
+          <br />
+          -> 공부 명언과 색을 모아놓은 quotes와 softColors라는<span
+            class="highlight_yellow"
+            >배열</span
+          >
+          생성
+          <br />
+          <br />
+          <br />
+          <span class="highlight_bold"
+            >quoteElement = document.getElementById("quote");</span
+          >
+          <br />
+          <br />
+          -> id="quote"로 된 곳을 가져와서 그안에 문구를 넣을 준비를 해놓는 코드
+          <br />
+          <br />
+          <br />
+          <span class="highlight_bold">function showRandomQuote() {</span><br />
+          <span class="highlight_bold"
+            >randomIndex = Math.floor(Math.random() * quotes.length);</span
+          ><br />
+          <span class="highlight_bold"
+            >const randomColorIndex = Math.floor(Math.random() *
+            softColors.length);</span
+          ><br />
+          <span class="highlight_bold"
+            >quoteElement.textContent = quotes[randomIndex];</span
+          ><br />
+          <span class="highlight_bold"
+            >quoteElement.style.color = softColors[randomColorIndex];</span
+          ><br />
+          <span class="highlight_bold">}</span><br />
+          <br />
+          Math.random() -> 0부터 1 사이의 랜덤 숫자를 만들어줌<br />
+          Math.floor() -> 소수점을 버리고 정수로 만들어줌<br />
+          quotes.length -> 문구가 총 몇 개인지 알려줌<br />
+          randomIndex -> 문구 중 하나를 고르는 랜덤 번호<br />
+          randomColorIndex -> 색깔 중 하나를 고르는 랜덤 번호<br />
+          <br />
+          <br />
+          <span class="highlight_bold"
+            >setInterval(showRandomQuote, 5000);</span
+          >
+          -> 5초마다 showRandomQuote을 실행
         </div>
       </div>
     </section>

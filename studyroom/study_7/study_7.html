@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="topbar">
-      <a href="../../main/main.html"
+      <a href="../../index.html"
         ><img src="../../img/arrow.png" alt="뒤로가기" class="arrow_icon"
       /></a>
       <h1 class="topTitle">회원가입 폼</h1>
@@ -19,26 +19,31 @@
         <h2>회원가입</h2>
         <form>
           <label for="name">이름</label>
-          <input type="text" id="name" name="name" required>
-    
+          <input type="text" id="name" name="name" required />
+
           <label for="phone">전화번호</label>
-          <input type="tel" id="phone" name="phone" required>
-    
+          <input type="tel" id="phone" name="phone" required />
+
           <label for="address">주소</label>
-          <input type="text" id="address" name="address" required>
-    
+          <input type="text" id="address" name="address" required />
+
           <label for="username">아이디</label>
-          <input type="text" id="username" name="username" required>
-    
+          <input type="text" id="username" name="username" required />
+
           <label for="password">비밀번호</label>
-          <input type="password" id="password" name="password" required>
-    
+          <input type="password" id="password" name="password" required />
+
           <label for="confirm-password">비밀번호 확인</label>
-          <input type="password" id="confirm-password" name="confirm-password" required>
-    
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+
           <label for="birth">생년월일</label>
-          <input type="date" id="birth" name="birth" required>
-    
+          <input type="date" id="birth" name="birth" required />
+
           <button type="submit">가입하기</button>
         </form>
       </div>
@@ -49,33 +54,57 @@
         <div class="contentTitle">회원가입 폼으로 공부한 내용 복습하기</div>
 
         <div class="contentText">
-          <span class="highlight_bold">&lt;div class="signup-form"&gt;</span>  -> 회원가입 폼 상자(signup-form 클래스)<br /> 
-          <span class="highlight_bold">&lt;h2&gt;회원가입&lt;/h2&gt;</span>  -> 회원가입 재목 표시<br /> 
-          <span class="highlight_bold">&lt;form&gt;</span>  -> 입력된 데이터를 서버에 보낼 수 있게 감싸주는 태그<br /> 
+          <span class="highlight_bold">&lt;div class="signup-form"&gt;</span> ->
+          회원가입 폼 상자(signup-form 클래스)<br />
+          <span class="highlight_bold">&lt;h2&gt;회원가입&lt;/h2&gt;</span> ->
+          회원가입 재목 표시<br />
+          <span class="highlight_bold">&lt;form&gt;</span> -> 입력된 데이터를
+          서버에 보낼 수 있게 감싸주는 태그<br />
           <span class="highlight_bold">...</span> <br />
-          <span class="highlight_bold">&lt;button type="submit"&gt;가입하기&lt;/button&gt;</span>  -> 가입 버튼, 눌렀을 때 폼 전송<br /> 
+          <span class="highlight_bold"
+            >&lt;button type="submit"&gt;가입하기&lt;/button&gt;</span
+          >
+          -> 가입 버튼, 눌렀을 때 폼 전송<br />
           <span class="highlight_bold">&lt;/form&gt;</span> <br />
           <span class="highlight_bold">&lt;/div&gt;</span> <br />
           <br />
           <br />
-          <span class="highlight_bold">&lt;label for="name"&gt;이름&lt;/label&gt;</span>  -> 이름이라는 글자를 보여줌<br />
-          <span class="highlight_bold">&lt;input type="text" id="name" name="name" required&gt;</span>  -> 실제 입력하는 칸<br />
-          <span class="highlight_yellow">-> 같은 방식으로 전화번호, 주소, 아이디, 비밀번호, 생일 등 입력칸이 있음!</span>
+          <span class="highlight_bold"
+            >&lt;label for="name"&gt;이름&lt;/label&gt;</span
+          >
+          -> 이름이라는 글자를 보여줌<br />
+          <span class="highlight_bold"
+            >&lt;input type="text" id="name" name="name" required&gt;</span
+          >
+          -> 실제 입력하는 칸<br />
+          <span class="highlight_yellow"
+            >-> 같은 방식으로 전화번호, 주소, 아이디, 비밀번호, 생일 등 입력칸이
+            있음!</span
+          >
           <br />
           <br />
           <br />
-          <span class="highlight_bold">.signup-form {</span>  -> signup-form 클래스 <br />
-          <span class="highlight_bold">background-color: white;</span>  -> 박스를 흰색으로  <br />
-          <span class="highlight_bold">padding: 30px;</span>  -> 안쪽 여백 <br />
-          <span class="highlight_bold">border-radius: 10px;</span>  -> 박스 모서리를 둥글게 <br />
-          <span class="highlight_bold">max-width: 400px;</span>  -> 최대 넓이 제한 <br />
-          <span class="highlight_bold">margin: auto;</span>  -> 가운데 정렬 <br />
-          <span class="highlight_bold">box-shadow: 0 0 10px rgba(0,0,0,0.1);}</span>  -> 그림자 효과 <br />
+          <span class="highlight_bold">.signup-form {</span> -> signup-form
+          클래스 <br />
+          <span class="highlight_bold">background-color: white;</span> -> 박스를
+          흰색으로 <br />
+          <span class="highlight_bold">padding: 30px;</span> -> 안쪽 여백 <br />
+          <span class="highlight_bold">border-radius: 10px;</span> -> 박스
+          모서리를 둥글게 <br />
+          <span class="highlight_bold">max-width: 400px;</span> -> 최대 넓이
+          제한 <br />
+          <span class="highlight_bold">margin: auto;</span> -> 가운데 정렬
+          <br />
+          <span class="highlight_bold"
+            >box-shadow: 0 0 10px rgba(0,0,0,0.1);}</span
+          >
+          -> 그림자 효과 <br />
           <br />
           <br />
-          <span class="highlight_bold">.signup-form input { ... }</span>  -> 모든 입력칸(비밀번호, 텍스트) <br />
-          <span class="highlight_bold">.signup-form button { ... }</span>  -> 가입버튼
-
+          <span class="highlight_bold">.signup-form input { ... }</span> -> 모든
+          입력칸(비밀번호, 텍스트) <br />
+          <span class="highlight_bold">.signup-form button { ... }</span> ->
+          가입버튼
         </div>
       </div>
     </section>
